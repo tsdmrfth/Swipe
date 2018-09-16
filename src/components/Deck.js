@@ -48,6 +48,13 @@ export default class Deck extends Component {
         LayoutAnimation.spring()
     }
 
+    componentWillReceiveProps(nextProps) {
+        /*if (nextProps.data !== this.props.data) {
+            this.setState({index: 0})
+        }*/
+        this.setState({index: 0})
+    }
+
     render() {
         return (
             <View>
@@ -86,7 +93,6 @@ export default class Deck extends Component {
             inputRange: [-SCREEN_WIDTH, 0, SCREEN_WIDTH],
             outputRange: ['-120deg', '0deg', '120deg']
         });
-
 
         return {
             ...this.state.position.getLayout(),

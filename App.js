@@ -16,6 +16,10 @@ const DATA = [
 
 class App extends React.Component {
 
+    constructor(props){
+        super(props);
+    }
+
     render() {
         return (
             <View style={styles.container}>
@@ -23,6 +27,10 @@ class App extends React.Component {
                     data={DATA}
                     renderCard={App.renderCard}
                     renderNoMoreCards={App.renderNoMoreCards}
+                    onSwipeRight={() => {
+                    }}
+                    onSwipeLeft={() => {
+                    }}
                 />
             </View>
         );
@@ -52,7 +60,7 @@ class App extends React.Component {
                 <Button
                     backgroundColor="#03A9F4"
                     title="Get more!"
-                    onPress={() => {
+                    onPress={()=>{
                     }}/>
             </Card>
         );
